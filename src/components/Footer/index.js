@@ -12,8 +12,8 @@ import "./Footer.css"
 function index() {
     return (
 			<section className='footer'>
-				<footer class='footer-distributed'>
-					<div class='footer-right'>
+				<footer className='footer-distributed'>
+					<div className='footer-right'>
 						<a href='#'>
 							<FaSpotify />
 						</a>
@@ -37,7 +37,7 @@ function index() {
 						</a>
 					</div>
 
-					<div class='footer-left'>
+					<div className='footer-left'>
 						<p>
 							Rita Ange Kagaju &copy; {new Date().getFullYear()} All rights
 							reserved

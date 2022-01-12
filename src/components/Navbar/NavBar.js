@@ -65,7 +65,7 @@ const NavBar = () => {
 		// adding the event when scroll change background
 		window.addEventListener("scroll", changeBackground);
 	});
-	console.log(navbar);
+	
 	return (
 		<div className={classes.root}>
 			
@@ -88,7 +88,7 @@ const NavBar = () => {
 						{isMobile ? (
 							<React.Fragment>
 								<IconButton
-									color='textPrimary'
+									color='primary'
 									className={classes.menuButton}
 									edge='start'
 									aria-label='menu'
