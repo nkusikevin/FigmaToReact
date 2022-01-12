@@ -1,9 +1,11 @@
-.navbar{
-    /* From https://css.glass */
+.navbar_active{
 background: rgba(0, 0, 0, 0.14);
-border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(7.4px);
 -webkit-backdrop-filter: blur(7.4px);
-border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.navbar_active_text{
+    color: #ff700b !important;
+    font-weight: bold;
 }

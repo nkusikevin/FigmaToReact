@@ -3,7 +3,7 @@ import "./Hero.css";
 
 function Hero() {
 	return (
-		<section className='hero'>
+		<section className='hero' id="home">
 			<div className='grid-container'>
 				<figure className='grid_item grid_item-1'>
 					<img

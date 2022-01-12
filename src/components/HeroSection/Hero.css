@@ -1,137 +1,153 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
-.hero{
-    position: relative;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1c2534+0,1c2534+35,1c2534+35,1c2534+35,fcfcfc+35,fcfcfc+35 */
-background: #1c2534; /* Old browsers */
-background: -moz-linear-gradient(left,  #1c2534 0%, #1c2534 35%, #1c2534 35%, #1c2534 35%, #fcfcfc 35%, #fcfcfc 35%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  #1c2534 0%,#1c2534 35%,#1c2534 35%,#1c2534 35%,#fcfcfc 35%,#fcfcfc 35%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  #1c2534 0%,#1c2534 35%,#1c2534 35%,#1c2534 35%,#fcfcfc 35%,#fcfcfc 35%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c2534', endColorstr='#fcfcfc',GradientType=1 ); /* IE6-9 */
-height: 100vh;
-width: 100%;
-
+.hero {
+	position: relative;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1c2534+0,1c2534+35,1c2534+35,1c2534+35,fcfcfc+35,fcfcfc+35 */
+	background: #1c2534; /* Old browsers */
+	background: -moz-linear-gradient(
+		left,
+		#1c2534 0%,
+		#1c2534 35%,
+		#1c2534 35%,
+		#1c2534 35%,
+		#fcfcfc 35%,
+		#fcfcfc 35%
+	); /* FF3.6-15 */
+	background: -webkit-linear-gradient(
+		left,
+		#1c2534 0%,
+		#1c2534 35%,
+		#1c2534 35%,
+		#1c2534 35%,
+		#fcfcfc 35%,
+		#fcfcfc 35%
+	); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		to right,
+		#1c2534 0%,
+		#1c2534 35%,
+		#1c2534 35%,
+		#1c2534 35%,
+		#fcfcfc 35%,
+		#fcfcfc 35%
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c2534', endColorstr='#fcfcfc',GradientType=1 ); /* IE6-9 */
+	height: 100vh;
+	width: 100%;
 }
-
-
-
 
 .grid-container {
-position: absolute;
-top: 100px;
-  margin: 2rem;
-  display: grid;
-  grid-template-columns : repeat(2,1fr);
-  grid-template-rows: repeat(1, 34vw);
-  grid-gap: 0;
+	position: absolute;
+	top: 100px;
+	margin: 0  7rem 106px 7rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 34vw);
+	grid-gap: 0;
 }
 
 .grid_image {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:0.5s ease-in;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 0.5s ease-in;
 }
 
 .grid_item {
-  position: relative;
-/*   overflow: hidden will prevent the image scaling to exceed the specified width. It will expand on back */
-  overflow: hidden; 
+	position: relative;
+	/*   overflow: hidden will prevent the image scaling to exceed the specified width. It will expand on back */
+	overflow: hidden;
 }
 
-
-
 .grid_item:hover .grid_image {
-  transform : scale(1.1);
-  filter: blur(2px);
+	transform: scale(1.1);
+	filter: blur(2px);
 }
 
 .text {
-  font-size : 1.2rem;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #C0392B;
-  font-weight:900;
-  display: none;
+	font-size: 1.2rem;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #c0392b;
+	font-weight: 900;
+	display: none;
 }
 
 .online_view {
-  margin-top: 40px;
-  padding: 5px 10px;
-  background-color: transparent;
-  color: #fff;
-  outline:none;
-  border: 1px solid yellow;
+	margin-top: 40px;
+	padding: 5px 10px;
+	background-color: transparent;
+	color: #fff;
+	outline: none;
+	border: 1px solid yellow;
 }
 
 button.online_view {
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
 }
 
-button.online_view:hover{
-  background-color: #E8F6F3;
-  color: #CA5D46;
+button.online_view:hover {
+	background-color: #e8f6f3;
+	color: #ca5d46;
 }
 
 .grid_item:hover .text {
-  display: block;
-  
-/*   text to see, otherwise hides in the back */
-  z-index: 999;
-  animation : slide 0.7s ease;
-}
+	display: block;
 
+	/*   text to see, otherwise hides in the back */
+	z-index: 999;
+	animation: slide 0.7s ease;
+}
 
 @keyframes slide {
-  0%{
-    top: -50%;
-  }
-  100% {
-    top: 40%;
-  }
+	0% {
+		top: -50%;
+	}
+	100% {
+		top: 40%;
+	}
 }
 
-
-.btn{
-    background-color: #ff700b;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    position: absolute;
-    /* top: 79px; */
-    bottom: 0;
-    right: 0;
-    margin-right: 3rem;
-    margin-bottom: 3rem;
+.btn {
+	background-color: #ff700b;
+	color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: 0.5s ease-in-out;
+	position: absolute;
+	/* top: 680px; */
+	bottom: 0px;
+	right: 0;
+	margin-right: 7rem;
+	margin-bottom: 1rem;
 }
 
 /* // Medium devices (tablets, 768px and up) */
-@media screen and (min-width: 320px) and (max-width: 786px){ 
-    .hero{
-        height: 44vh;
-    }
+@media screen and (min-width: 320px) and (max-width: 786px) {
+	.hero {
+		height: 44vh;
+	}
 
-    .btn{
-      /* padding: 2px; */
-      display: none;
-    }
-    .grid-container {
-        top: 50px;
-        margin: 1rem;
-        display: grid;
-        grid-template-columns : repeat(2,1fr);
-        grid-template-rows: repeat(1, 40vw);
-        grid-gap: 0;
-    }
- }
+	.btn {
+		/* padding: 2px; */
+		display: none;
+	}
+	.grid-container {
+		top: 50px;
+		margin: 1rem;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(1, 40vw);
+		grid-gap: 0;
+	}
+}

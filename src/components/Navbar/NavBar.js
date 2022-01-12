@@ -7,19 +7,17 @@ import {
 	Typography,
 	useMediaQuery,
 	Button,
-	useScrollTrigger,
-	Slide,
 	Menu,
 	MenuItem,
 
 } from "@material-ui/core";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 
 // IMPORTING ICONS
 import MenuIcon from "@material-ui/icons/Menu";
-
+import "./NavBar.css";
 
 
 
@@ -44,18 +42,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-function HideOnScroll(props) {
-	const { children } = props;
-	const trigger = "useScrollTrigger()";
-
-	return (
-		<Slide appear={false} direction={"down"} in={!trigger}>
-			{children}
-		</Slide>
-	);
-}
-
-const NavBar = (props) => {
+const NavBar = () => {
 	const classes = useStyles();
 	const [anchor, setAnchor] = React.useState(null);
 	const [navbar, setNavbar] = React.useState(false);
@@ -81,123 +68,119 @@ const NavBar = (props) => {
 	console.log(navbar);
 	return (
 		<div className={classes.root}>
-			{/* <HideOnScroll {...props}> */}
-				<BrowserRouter>
-					<AppBar
-						className={navbar ? "navbar active" : "navbar"}
-						style={{
-							boxShadow: "none",
-							backgroundColor: "transparent",
-							padding: "17px",
-						}}>
-						<Toolbar>
-							<Typography
-								variant='h3'
-								component='p'
-								color='textSecondary'
-								className={classes.title}>
-								RITA ANGE KAGAJU
-							</Typography>
-							{isMobile ? (
-								<React.Fragment>
-									<IconButton
-										color='textPrimary'
-										className={classes.menuButton}
-										edge='start'
-										aria-label='menu'
-										onClick={handleMenu}>
-										<MenuIcon />
-									</IconButton>
-									<Menu
-										id='menu-appbar'
-										anchorEl={anchor}
-										anchorOrigin={{
-											vertical: "top",
-											horizontal: "right",
-										}}
-										KeepMounted
-										transformOrigin={{
-											vertical: "top",
-											horizontal: "right",
-										}}
-										open={open}>
-										<MenuItem
-											onClick={() => setAnchor(null)}
-											component={Link}
-											to='/'>
-											<Typography variant='h6'> Home</Typography>
-										</MenuItem>
-										<MenuItem
-											onClick={() => setAnchor(null)}
-											component={Link}
-											to='/College'>
-											<Typography variant='h6'> About </Typography>
-										</MenuItem>
-										<MenuItem
-											onClick={() => setAnchor(null)}
-											component={Link}
-											to='/About'>
-											<Typography variant='h6'> Music</Typography>
-										</MenuItem>
-										<MenuItem
-											onClick={() => setAnchor(null)}
-											component={Link}
-											to='/Personal'>
-											<Typography variant='h6'> Contact </Typography>
-										</MenuItem>
-									</Menu>
-								</React.Fragment>
-							) : (
-								<div 
-									style={{
-										marginRight: "2rem",
-										boxShadow: "none",
-										backgroundColor: "transparent",
-									}}>
-									<Button
-										variant='text'
+			
+				<AppBar
+					className={navbar ? "navbar_active" : "navbar"}
+					style={{
+						boxShadow: "none",
+						backgroundColor: "transparent",
+						marginTop:"1rem",
+						// padding: "17px",
+					}}>
+					<Toolbar>
+						<Typography
+							variant='h3'
+							component='p'
+							color='textSecondary'
+							className={classes.title}>
+							RITA ANGE KAGAJU
+						</Typography>
+						{isMobile ? (
+							<React.Fragment>
+								<IconButton
+									color='textPrimary'
+									className={classes.menuButton}
+									edge='start'
+									aria-label='menu'
+									onClick={handleMenu}>
+									<MenuIcon />
+								</IconButton>
+								<Menu
+									id='menu-appbar'
+									anchorEl={anchor}
+									anchorOrigin={{
+										vertical: "top",
+										horizontal: "right",
+									}}
+									KeepMounted
+									transformOrigin={{
+										vertical: "top",
+										horizontal: "right",
+									}}
+									open={open}>
+									<MenuItem
+										onClick={() => setAnchor(null)}
 										component={Link}
-										style={{ fontSize: "20px" }}
-										to='/'
-										color='default'>
-										Home
-									</Button>
-									<Button
-										variant='text'
+										to='home'>
+										<Typography variant='h6'> Home</Typography>
+									</MenuItem>
+									<MenuItem
+										onClick={() => setAnchor(null)}
 										component={Link}
-										style={{ fontSize: "20px" }}
-										to='/about'
-										color='default'>
-										About
-									</Button>
-									<Button
-										variant='text'
+										to='home'>
+										<Typography variant='h6'> About </Typography>
+									</MenuItem>
+									<MenuItem
+										onClick={() => setAnchor(null)}
 										component={Link}
-										to='/music'
-										style={{ fontSize: "20px" }}
-										color='default'>
-										Music
-									</Button>
-									<Button
-										variant='text'
+										to='about'>
+										<Typography variant='h6'> Music</Typography>
+									</MenuItem>
+									<MenuItem
+										onClick={() => setAnchor(null)}
 										component={Link}
-										style={{ fontSize: "20px" }}
-										to='/contact'
-										color='default'>
-										Contact
-									</Button>
-								</div>
-							)}
-						</Toolbar>
-					</AppBar>
-					{/* <Switch>
-						<Route exact path='/' component={Home} />
-						<Route exact path='/College' component={College} />
-						<Route exact path='/About' component={About} />
-						<Route exact path='/Personal' component={Personal} />
-					</Switch> */}
-				</BrowserRouter>
-			{/* </HideOnScroll> */}
+										to='music'>
+										<Typography variant='h6'> Contact </Typography>
+									</MenuItem>
+								</Menu>
+							</React.Fragment>
+						) : (
+							<div
+								style={{
+									marginRight: "2rem",
+									boxShadow: "none",
+									backgroundColor: "transparent",
+								}}>
+								<Button
+									variant='text'
+									component={Link}
+									className={navbar ? "navbar_active_text" : "navbar"}
+									style={{ fontSize: "20px" }}
+									to='home'
+									color='default'>
+									Home
+								</Button>
+								<Button
+									variant='text'
+									component={Link}
+									className={navbar ? "navbar_active_text" : "navbar"}
+									style={{ fontSize: "20px" }}
+									to='about'
+									color='default'>
+									About
+								</Button>
+								<Button
+									variant='text'
+									component={Link}
+									to='/music'
+									className={navbar ? "navbar_active_text" : "navbar"}
+									style={{ fontSize: "20px" }}
+									color='default'>
+									Music
+								</Button>
+								<Button
+									variant='text'
+									component={Link}
+									className={navbar ? "navbar_active_text" : "navbar"}
+									style={{ fontSize: "20px" }}
+									to='/contact'
+									color='default'>
+									Contact
+								</Button>
+							</div>
+						)}
+					</Toolbar>
+				</AppBar>
 		</div>
 	);
 };

@@ -1,8 +1,9 @@
 .about{
     position: relative;
     height: 400px;
-    width: 100%;
-    padding: 10px;
+    /* width: 100%; */
+    /* padding: 10px; */
+    margin: 2rem 7rem;
 }
 
 .container {
@@ -34,5 +35,16 @@
 
   .box {
     margin: 0 0 1rem;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 786px) {
+  .about{
+      position: relative;
+      height: inherit;
+      width: 100%;
+      padding: 10px;
+      margin:0;
   }
 }

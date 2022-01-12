@@ -1,0 +1,39 @@
+.latest {
+	position: relative;
+	height: 678px;
+	/* width: 100%; */
+  margin: 37px 7rem 0  7rem;
+	/* background-color: rgb(255, 255, 255); */
+}
+iframe{
+	/* margin-right: 0.85rem !important; */
+	width: 90%;
+	height: 250px;
+}
+
+li{
+		margin-right: 1rem !important;
+}
+
+.react-multiple-carousel__arrow {
+	background: rgb(255 147 7);
+}
+
+.latest h2{
+	color: rgb(255 147 7);
+	font-weight: 800;
+	font-size: 2.5rem;
+	margin-left: 1rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 786px) {
+	.latest{
+		margin: 0;
+		width: 100%;
+	}
+
+	iframe{
+		width: 90%;
+		height: 250px;
+	}
+}
