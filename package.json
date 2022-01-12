@@ -14,8 +14,10 @@
     "react-multi-carousel": "^2.6.5",
     "react-router-dom": "^6.2.1",
     "react-scripts": "0.9.5"
+    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
   },
   "scripts": {
+  
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
