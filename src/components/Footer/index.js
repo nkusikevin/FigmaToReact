@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import {
 	FaSpotify,
 	FaYoutube,
@@ -14,27 +15,27 @@ function index() {
 			<section className='footer'>
 				<footer className='footer-distributed'>
 					<div className='footer-right'>
-						<a href='#'>
+						<Link to='#'>
 							<FaSpotify />
-						</a>
-						<a href='#'>
+						</Link>
+						<Link to='#'>
 							<FaYoutube />
-						</a>
-						<a href='#'>
+						</Link>
+						<Link to='#'>
 							<FaDeezer />
-						</a>
-						<a href='#'>
+						</Link>
+						<Link to='#'>
 							<SiApplemusic />
-						</a>
-						<a href='#'>
+						</Link>
+						<Link to='#'>
 							<FaInstagram />
-						</a>
-						<a href='#'>
+						</Link>
+						<Link to='#'>
 							<FaTwitter />
-						</a>
-						<a href='#'>
+						</Link>
+						<Link to='#'>
 							<FaFacebook />
-						</a>
+						</Link>
 					</div>
 
 					<div className='footer-left'>
