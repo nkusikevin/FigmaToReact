@@ -1,5 +1,6 @@
 // IMPORTING APIS
 import React from "react";
+import { Link } from "react-scroll";
 import {
 	AppBar,
 	Toolbar,
@@ -13,7 +14,7 @@ import {
 } from "@material-ui/core";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import {  Link } from "react-router-dom";
+// import {  Link } from "react-router-dom";
 
 // IMPORTING ICONS
 import MenuIcon from "@material-ui/icons/Menu";
@@ -68,119 +69,150 @@ const NavBar = () => {
 	
 	return (
 		<div className={classes.root}>
-			
-				<AppBar
-					className={navbar ? "navbar_active" : "navbar"}
-					style={{
-						boxShadow: "none",
-						backgroundColor: "transparent",
-						marginTop:"1rem",
-						// padding: "17px",
-					}}>
-					<Toolbar>
-						<Typography
-							variant='h3'
-							component='p'
-							color='textSecondary'
-							className={classes.title}>
-							RITA ANGE KAGAJU
-						</Typography>
-						{isMobile ? (
-							<React.Fragment>
-								<IconButton
-									color='primary'
-									className={classes.menuButton}
-									edge='start'
-									aria-label='menu'
-									onClick={handleMenu}>
-									<MenuIcon />
-								</IconButton>
-								<Menu
-									id='menu-appbar'
-									anchorEl={anchor}
-									anchorOrigin={{
-										vertical: "top",
-										horizontal: "right",
-									}}
-									KeepMounted
-									transformOrigin={{
-										vertical: "top",
-										horizontal: "right",
-									}}
-									open={open}>
-									<MenuItem
-										onClick={() => setAnchor(null)}
-										component={Link}
-										to='home'>
-										<Typography variant='h6'> Home</Typography>
-									</MenuItem>
-									<MenuItem
-										onClick={() => setAnchor(null)}
-										component={Link}
-										to='home'>
-										<Typography variant='h6'> About </Typography>
-									</MenuItem>
-									<MenuItem
-										onClick={() => setAnchor(null)}
-										component={Link}
-										to='about'>
-										<Typography variant='h6'> Music</Typography>
-									</MenuItem>
-									<MenuItem
-										onClick={() => setAnchor(null)}
-										component={Link}
-										to='music'>
-										<Typography variant='h6'> Contact </Typography>
-									</MenuItem>
-								</Menu>
-							</React.Fragment>
-						) : (
-							<div
-								style={{
-									marginRight: "2rem",
-									boxShadow: "none",
-									backgroundColor: "transparent",
-								}}>
-								<Button
-									variant='text'
+			<AppBar
+				className={navbar ? "navbar_active" : "navbar"}
+				style={{
+					boxShadow: "none",
+					backgroundColor: "transparent",
+					marginTop: "1rem",
+					// padding: "17px",
+				}}>
+				<Toolbar>
+					<Typography
+						variant='h3'
+						component='p'
+						color='textSecondary'
+						className={classes.title}>
+						RITA ANGE KAGAJU
+					</Typography>
+					{isMobile ? (
+						<React.Fragment>
+							<IconButton
+								color='primary'
+								className={classes.menuButton}
+								edge='start'
+								aria-label='menu'
+								onClick={handleMenu}>
+								<MenuIcon />
+							</IconButton>
+							<Menu
+								id='menu-appbar'
+								anchorEl={anchor}
+								anchorOrigin={{
+									vertical: "top",
+									horizontal: "right",
+								}}
+								KeepMounted
+								transformOrigin={{
+									vertical: "top",
+									horizontal: "right",
+								}}
+								open={open}>
+								<MenuItem
+									onClick={() => setAnchor(null)}
 									component={Link}
-									className={navbar ? "navbar_active_text" : "navbar"}
-									style={{ fontSize: "20px" }}
 									to='home'
-									color='default'>
-									Home
-								</Button>
-								<Button
-									variant='text'
+									activeClass='active'
+									spy={true}
+									smooth={true}
+									duration={500}>
+									<Typography variant='h6'> Home</Typography>
+								</MenuItem>
+								<MenuItem
+									onClick={() => setAnchor(null)}
 									component={Link}
-									className={navbar ? "navbar_active_text" : "navbar"}
-									style={{ fontSize: "20px" }}
-									to='about'
-									color='default'>
-									About
-								</Button>
-								<Button
-									variant='text'
+									activeClass='active'
+									spy={true}
+									smooth={true}
+									duration={500}
+									to='about'>
+									<Typography variant='h6'> About </Typography>
+								</MenuItem>
+								<MenuItem
+									onClick={() => setAnchor(null)}
 									component={Link}
-									to='/music'
-									className={navbar ? "navbar_active_text" : "navbar"}
-									style={{ fontSize: "20px" }}
-									color='default'>
-									Music
-								</Button>
-								<Button
-									variant='text'
+									activeClass='active'
+									spy={true}
+									smooth={true}
+									duration={500}
+									to='music'>
+									<Typography variant='h6'> Music</Typography>
+								</MenuItem>
+								<MenuItem
+									onClick={() => setAnchor(null)}
 									component={Link}
-									className={navbar ? "navbar_active_text" : "navbar"}
-									style={{ fontSize: "20px" }}
-									to='/contact'
-									color='default'>
-									Contact
-								</Button>
-							</div>
-						)}
-					</Toolbar>
-				</AppBar>
+									activeClass='active'
+									spy={true}
+									smooth={true}
+									duration={500}
+									to='contact'>
+									<Typography variant='h6'> Contact </Typography>
+								</MenuItem>
+							</Menu>
+						</React.Fragment>
+					) : (
+						<div
+							style={{
+								marginRight: "2rem",
+								boxShadow: "none",
+								backgroundColor: "transparent",
+							}}>
+							<Button
+								variant='text'
+								component={Link}
+								className={navbar ? "navbar_active_text" : "navbar"}
+								style={{ fontSize: "20px" }}
+								to='home'
+								activeClass='active'
+								spy={true}
+								smooth={true}
+								duration={500}
+								color='default'>
+								Home
+							</Button>
+							<Button
+								variant='text'
+								component={Link}
+								className={navbar ? "navbar_active_text" : "navbar"}
+								style={{ fontSize: "20px" }}
+								to='about'
+								activeClass='active'
+								spy={true}
+								smooth={true}
+								duration={500}
+								color='default'>
+								About
+							</Button>
+							<Button
+								variant='text'
+								component={Link}
+								to='music'
+								className={navbar ? "navbar_active_text" : "navbar"}
+								style={{ fontSize: "20px" }}
+								activeClass='active'
+								spy={true}
+								smooth={true}
+								duration={500}
+								color='default'>
+								Music
+							</Button>
+							<Button
+								variant='text'
+								component={Link}
+								className={navbar ? "navbar_active_text" : "navbar"}
+								style={{ fontSize: "20px" }}
+								to='contact'
+								activeClass='active'
+								spy={true}
+								smooth={true}
+								duration={500}
+								color='default'>
+								Contact
+							</Button>
+						</div>
+					)}
+				</Toolbar>
+			</AppBar>
 		</div>
 	);
 };

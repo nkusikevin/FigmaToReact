@@ -21,7 +21,7 @@ function index() {
 			},
 		};
     return (
-			<section className='latest'>
+			<section className='latest' id="music">
 				<h2>Latest Release</h2>
 				<Carousel responsive={responsive}>
 					<div>
