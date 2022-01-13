@@ -1,9 +1,9 @@
 import React from "react";
 import "./Hero.css";
-
+import {Link} from "react-router-dom";
 function Hero() {
 	return (
-		<section className='hero' id="home">
+		<section className='hero' id='home'>
 			<div className='grid-container'>
 				<figure className='grid_item grid_item-1'>
 					<img
@@ -21,7 +21,9 @@ function Hero() {
 					/>
 				</figure>
 			</div>
+			<Link to='contact'>
 			<div className='btn'>Contact Me</div>
+			</Link>
 		</section>
 	);
 }

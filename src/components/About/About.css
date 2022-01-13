@@ -23,6 +23,12 @@
     object-fit: cover;
     border-radius: 5px;
 }
+
+.column-2 h1{
+  color: rgb(255 147 7);
+  font-weight: bold;
+  font-size: 2.5rem;
+}
 .column-2{
   padding: 3rem;
 }

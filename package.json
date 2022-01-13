@@ -10,8 +10,7 @@
     "react-icons": "^4.3.1",
     "react-multi-carousel": "^2.6.5",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^3.0.1",
-    "uglify-js": "github:mishoo/UglifyJS2#harmony"
+    "react-scripts": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,8 +29,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/preset-react": "^7.16.7"
   }
 }

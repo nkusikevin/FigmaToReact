@@ -2,7 +2,7 @@
 	position: relative;
 	height: 678px;
 	/* width: 100%; */
-  margin: 37px 7rem 0  7rem;
+  margin: 37px 7rem -16rem  7rem;
 	/* background-color: rgb(255, 255, 255); */
 }
 iframe{
@@ -29,6 +29,7 @@ li{
 @media screen and (min-width: 320px) and (max-width: 786px) {
 	.latest{
 		margin: 0;
+		margin-bottom: -297px;
 		width: 100%;
 	}
 

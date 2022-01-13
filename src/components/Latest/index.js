@@ -22,7 +22,7 @@ function index() {
 		};
     return (
 			<section className='latest'>
-					<h2>Latest Release</h2>
+				<h2>Latest Release</h2>
 				<Carousel responsive={responsive}>
 					<div>
 						<iframe
@@ -39,7 +39,7 @@ function index() {
 						<iframe
 							width='853'
 							height='480'
-							src={`https://www.youtube.com/embed/GZwXNmZeKAw?controls=0&autoplay=0`}
+							src={`https://www.youtube.com/embed/AuhmEvirSss?controls=0&autoplay=0`}
 							frameBorder='0'
 							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
 							allowFullScreen
@@ -50,7 +50,7 @@ function index() {
 						<iframe
 							width='853'
 							height='480'
-							src={`https://www.youtube.com/embed/GZwXNmZeKAw?controls=0&autoplay=0`}
+							src={`https://www.youtube.com/embed/FLixbZ4-rE8?controls=0&autoplay=0`}
 							frameBorder='0'
 							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
 							allowFullScreen
@@ -61,7 +61,7 @@ function index() {
 						<iframe
 							width='853'
 							height='480'
-							src={`https://www.youtube.com/embed/GZwXNmZeKAw?controls=0&autoplay=0`}
+							src={`https://www.youtube.com/embed/1ERMHpZH51M?controls=0&autoplay=0`}
 							frameBorder='0'
 							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
 							allowFullScreen
